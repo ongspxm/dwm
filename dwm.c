@@ -1375,7 +1375,7 @@ void
 run(void)
 {
 	XEvent ev;
-	/* main event loop */
+    /* main event loop */
 	XSync(dpy, False);
 	while (running && !XNextEvent(dpy, &ev))
 		if (handler[ev.type])
@@ -2125,6 +2125,10 @@ zoom(const Arg *arg)
 	pop(c);
 }
 
+void runAutoStart(){
+    system("cd ~/.dwm; ./startup.sh &");
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -2139,7 +2143,8 @@ main(int argc, char *argv[])
 	checkotherwm();
 	setup();
 	scan();
-	run();
+	runAutoStart();
+    run();
 	cleanup();
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
