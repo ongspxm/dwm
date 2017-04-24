@@ -28,7 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-    { "Firefox", NULL, NULL, 1<<4, 0, -1 },
+    { "Firefox", NULL, NULL, 1<<3, 0, -1 },
     { "trayer", NULL, NULL, 1<<8, 1, -1 },
 };
 
@@ -81,7 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 //	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_F4,     killclient,     {0} },
+	{ MODKEY,                       XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_Down,   setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_Up,     setlayout,      {.v = &layouts[2]} },
