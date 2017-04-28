@@ -4,7 +4,7 @@ VERSION = 6.1
 # Customize below to fit your system
 
 # paths
-PREFIX = /home/ongspxm/dwm/bin
+PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
