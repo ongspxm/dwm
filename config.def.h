@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", "-e", "tmux" };
+static const char *termcmd[]  = { "st", "-e", "dvtm" };
 static const char *slockcmd[] = { "slock" };
 static const char *sound1cmd[] = { "adj-sound.sh", "+" };
 static const char *sound2cmd[] = { "adj-sound.sh", "-" };
@@ -70,11 +70,11 @@ static const char *slock[] = { "slock" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_F2,     spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY|ShiftMask,             XK_Left,   spawn,          {.v = blight2cmd } },
-	{ MODKEY|ShiftMask,             XK_Right,     spawn,          {.v = blight1cmd } },
+	{ MODKEY|ShiftMask,             XK_Right,  spawn,          {.v = blight1cmd } },
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = sound2cmd } },
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = sound1cmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = slock } },
