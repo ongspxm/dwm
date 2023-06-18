@@ -66,7 +66,6 @@ static const char *sound1cmd[] = { "adj-sound.sh", "+" };
 static const char *sound2cmd[] = { "adj-sound.sh", "-" };
 static const char *blight1cmd[] = { "adj-blight.sh", "+" };
 static const char *blight2cmd[] = { "adj-blight.sh", "-" };
-static const char *slock[] = { "slock" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -77,7 +76,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Right,  spawn,          {.v = blight1cmd } },
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = sound2cmd } },
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = sound1cmd } },
-	{ MODKEY,                       XK_l,      spawn,          {.v = slock } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,    focusstack,     {.i = -1 } },
